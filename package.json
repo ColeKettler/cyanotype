@@ -20,5 +20,12 @@
     "blue",
     "blueprint"
   ],
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-cached": "^1.1.0",
+    "gulp-jshint": "^2.0.0",
+    "jshint": "^2.9.1-rc2",
+    "jshint-stylish": "^2.1.0"
+  }
 }
