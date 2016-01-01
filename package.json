@@ -1,0 +1,24 @@
+{
+  "name": "colekettler.com-theme",
+  "version": "0.0.0",
+  "description": "Ghost theme for colekettler.com",
+  "author": {
+    "name": "Cole Kettler",
+    "email": "me@colekettler.com",
+    "url": "https://github.com/ColeKettler"
+  },
+  "homepage": "https://github.com/ColeKettler/colekettler.com-theme#readme",
+  "repository": "ColeKettler/colekettler.com-theme",
+  "bugs": {
+    "url": "https://github.com/ColeKettler/colekettler.com-theme/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ghost",
+    "theme",
+    "blog",
+    "blue",
+    "blueprint"
+  ],
+  "private": true
+}
