@@ -1,16 +1,16 @@
 {
-  "name": "colekettler.com-theme",
+  "name": "cyanotype",
   "version": "0.0.0",
-  "description": "Ghost theme for colekettler.com",
+  "description": "A blueprint-ish Ghost theme",
   "author": {
     "name": "Cole Kettler",
     "email": "me@colekettler.com",
     "url": "https://github.com/ColeKettler"
   },
-  "homepage": "https://github.com/ColeKettler/colekettler.com-theme#readme",
-  "repository": "ColeKettler/colekettler.com-theme",
+  "homepage": "https://github.com/ColeKettler/cyanotype#readme",
+  "repository": "ColeKettler/cyanotype",
   "bugs": {
-    "url": "https://github.com/ColeKettler/colekettler.com-theme/issues"
+    "url": "https://github.com/ColeKettler/cyanotype/issues"
   },
   "license": "MIT",
   "keywords": [
@@ -20,12 +20,12 @@
     "blue",
     "blueprint"
   ],
-  "private": true,
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-cached": "^1.1.0",
     "gulp-jshint": "^2.0.0",
     "jshint": "^2.9.1-rc2",
     "jshint-stylish": "^2.1.0"
-  }
+  },
+  "private": true
 }
