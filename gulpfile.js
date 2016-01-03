@@ -9,13 +9,16 @@ var cache = require('gulp-cached');
 var jshint = require('gulp-jshint');
 
 // FILES
+var componentFiles = ['assets/components/**/*'];
 var cssFiles = ['assets/css/**/*.css'];
 var fontFiles = ['assets/fonts/**/*.{eot,svg,ttf,woff,woff2}'];
 var hbsFiles = ['*.hbs', 'partials/*.hbs'];
 var imageFiles = ['assets/images/**/*.{gif,jpg,jpeg,png}'];
 var jsFiles = ['gulpfile.js', 'assets/js/**/*.js'];
-var jsonFiles = ['package.json'];
+var jsonFiles = ['*.json'];
+
 var allFiles = Array.prototype.concat.apply([], [
+  componentFiles,
   cssFiles,
   fontFiles,
   hbsFiles,
@@ -33,7 +36,7 @@ gulp.task('default', ['build', 'ghost', 'lint', 'watch']);
 
 gulp.task('build', ['clean', 'copy']);
 
-gulp.task('clean', function() {
+gulp.task('clean', function () {
   return del(themeDir, { force: true });
 });
 

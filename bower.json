@@ -1,0 +1,8 @@
+{
+  "name": "cyanotype",
+  "dependencies": {
+    "normalize-css": "normalize.css#~3.0.3",
+    "font-awesome": "fontawesome#~4.5.0"
+  },
+  "private": true
+}

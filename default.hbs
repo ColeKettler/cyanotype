@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}">
+    <link rel="shortcut icon" href="{{asset 'favicon.ico'}}">
+
+    <link rel="stylesheet" href="{{asset 'components/normalize-css/normalize.css'}}">
+    <link rel="stylesheet" href="{{asset 'components/font-awesome/css/font-awesome.css'}}">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oxygen">
+    <link rel="stylesheet" href="{{asset 'css/screen.css'}}">
+
+    {{ghost_head}}
+
+  </head>
+
+  <body class="{{body_class}}">
+
+    {{navigation}}
+
+    <div class="site-wrapper">
+
+      {{{body}}}
+
+      <footer class="site-footer">
+        <section class="copyright">
+          <a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}
+        </section>
+        <section class="poweredby">
+          Proudly published with <a href="https://ghost.org">Ghost</a>
+        </section>
+      </footer>
+    </div>
+
+    {{ghost_foot}}
+
+  </body>
+</html>

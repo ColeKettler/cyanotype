@@ -1,0 +1,59 @@
+body {
+  background-color: #0f033f;
+  color: #8fbeda;
+  font-family: Oxygen, sans-serif;
+  font-size: .875em;
+  line-height: 1.4;
+  padding: 0 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Bebas Neue Regular', sans-serif;
+}
+
+.post-template h1,
+.post-template h2,
+.post-template h3,
+.post-template h4,
+.post-template h5,
+.post-template h6 {
+  text-align: center;
+}
+
+hr {
+  height: 2px;
+  background-color: #8fbeda;
+  border: 0;
+}
+
+a {
+  transition: color .2s ease-out;
+  color: #009d9e;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #8fbeda;
+  cursor: pointer;
+}
+
+/* Fonts */
+@font-face {
+  font-family: 'Bebas Neue Regular';
+  src: url('../fonts/bebas_neue_regular.woff2') format('woff2'),
+       url('../fonts/bebas_neue_regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Tablet */
+@media screen and (min-width: 48em) {
+  body {
+    font-size: 1em;
+  }
+}
