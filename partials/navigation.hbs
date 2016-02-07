@@ -1,0 +1,15 @@
+<nav class="nav">
+  <ul>
+    <li class="nav-title">
+      <h3>Menu</h3>
+    </li>
+    {{#foreach navigation}}
+      <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation">
+        <a href="{{url absolute="true"}}" class="button">
+          <span>{{label}}</span>
+        </a>
+      </li>
+    {{/foreach}}
+  </ul>
+</nav>
+<span class="nav-cover"></span>

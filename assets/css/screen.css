@@ -1,10 +1,17 @@
+/* Base */
+html {
+  height: 100%;
+  max-height: 100%;
+}
+
 body {
+  height: 100%;
+  max-height: 100%;
   background-color: #0f033f;
   color: #8fbeda;
   font-family: Oxygen, sans-serif;
   font-size: .875em;
   line-height: 1.4;
-  padding: 0 1em;
 }
 
 h1,
@@ -14,14 +21,6 @@ h4,
 h5,
 h6 {
   font-family: 'Bebas Neue Regular', sans-serif;
-}
-
-.post-template h1,
-.post-template h2,
-.post-template h3,
-.post-template h4,
-.post-template h5,
-.post-template h6 {
   text-align: center;
 }
 
@@ -32,14 +31,217 @@ hr {
 }
 
 a {
-  transition: color .2s ease-out;
   color: #009d9e;
   text-decoration: inherit;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  transition: color 0.3s ease;
 }
 
-a:hover {
+a:active {
   color: #8fbeda;
-  cursor: pointer;
+}
+
+.button,
+button {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #8fbeda;
+  opacity: 1;
+  background-color: #0f033f;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  transition: color 0.3s ease,
+              background-color 0.3s ease;
+}
+
+.button:active,
+button:active {
+  color: #0f033f;
+  background-color: #8fbeda;
+}
+
+.button:focus,
+button:focus {
+  outline: 0;
+}
+
+.site-wrapper {
+  position: relative;
+  min-height: 100%;
+}
+
+.main-nav {
+  position: relative;
+  z-index: 10;
+  padding: 35px 40px;
+  margin: 0 0 30px 0;
+}
+
+/* Icons */
+.icon,
+.icon:before,
+.icon:after {
+  background-color: #8fbeda;
+}
+
+button .icon,
+button .icon:before,
+button .icon:after {
+  transition: background-color 0.3s ease;
+}
+
+button:active .icon,
+button:active .icon:before,
+button:active .icon:after {
+  background-color: #0f033f;
+}
+
+/* Menu icon */
+.icon-menu,
+.icon-menu:before,
+.icon-menu:after {
+  display: block;
+  position: relative;
+  height: 1px;
+  width: 100%;
+}
+
+.icon-menu:before,
+.icon-menu:after {
+  content: "";
+}
+
+.icon-menu:before {
+  top: -9px;
+}
+
+.icon-menu:after {
+  bottom: -8px;
+}
+
+/* Navigation */
+/* Lovingly copied from Casper (https://github.com/TryGhost/Casper) */
+body.nav-opened .nav-cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 200px;
+  bottom: 0;
+  z-index: 100;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: -200px;
+  bottom: 0;
+  z-index: 5;
+  height: auto;
+  width: 200px;
+  opacity: 0;
+  background-color: inherit;
+  border-left: 1px solid #8fbeda;
+  margin-bottom: 0;
+  text-align: left;
+  overflow-y: auto;
+  transition: transform 0.5s ease,
+              opacity 0.3s ease 0.6s;
+}
+
+body.nav-opened .nav {
+  opacity: 1;
+  transition: transform 0.5s ease,
+              opacity 0s ease 0s;
+  transform: translate3D(-200px, 0, 0);
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-title {
+  margin-top: 59px;
+}
+
+.nav-title h3 {
+  margin: 0;
+  text-align: left;
+  font-size: 2em;
+}
+
+.nav li {
+  width: 100%;
+  border-bottom: 1px solid #8fbeda;
+  text-align: left;
+}
+
+.nav h3,
+.nav a {
+  display: block;
+  padding: 10px 0 10px 20px;
+  color: #8fbeda;
+  font-family: 'Bebas Neue Regular', sans-serif;
+}
+
+.nav a {
+  border: 0;
+}
+
+.nav a span {
+  font-size: 1.5em;
+}
+
+.nav-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  height: 39px;
+  width: 39px;
+}
+
+/* Animated nav menu / close icon */
+/* Heavily inspired by Nick Salloum */
+/* (http://callmenick.com/post/animating-css-only-hamburger-menu-icons) */
+.nav-button .icon-menu,
+.nav-button .icon-menu:before,
+.nav-button .icon-menu:after {
+  visibility: visible;
+}
+
+.nav-button .icon-menu {
+  transition: background-color 0.3s ease,
+              visibility 0s 0.3s;
+}
+
+.nav-button .icon-menu:before {
+  transition: background-color 0.3s ease,
+              top 0.3s 0.3s,
+              transform 0.3s 0s;
+}
+
+.nav-button .icon-menu:after {
+  transition: background-color 0.3s ease,
+              bottom 0.3s 0.3s,
+              transform 0.3s 0s;
+}
+
+body.nav-opened .nav-button .icon-menu {
+  visibility: hidden;
+}
+
+body.nav-opened .nav-button .icon-menu:before {
+  top: 0;
+  transform: rotate(45deg);
+  transition: top 0.3s 0s,
+              transform 0.3s 0.3s;
+}
+
+body.nav-opened .nav-button .icon-menu:after {
+  bottom: 1px;
+  transform: rotate(-45deg);
+  transition: bottom 0.3s 0s,
+              transform 0.3s 0.3s;
 }
 
 /* Fonts */
@@ -55,5 +257,21 @@ a:hover {
 @media screen and (min-width: 48em) {
   body {
     font-size: 1em;
+  }
+
+  a:hover {
+    color: #8fbeda;
+  }
+
+  .button:hover,
+  button:hover {
+    color: #0f033f;
+    background-color: #8fbeda;
+  }
+
+  button:hover .icon,
+  button:hover .icon:before,
+  button:hover .icon:after {
+    background-color: #0f033f;
   }
 }

@@ -23,6 +23,19 @@
 
     {{navigation}}
 
+    <div class="main-nav overlay">
+      {{#if @blog.logo}}
+        <a class="blog-logo" href="{{@blog.url}}">
+          <img src="{{@blog.logo}}" alt="{{@blog.title}}">
+        </a>
+      {{/if}}
+      {{#if @blog.navigation}}
+        <button class="nav-button">
+          <span class="icon icon-menu"></span>
+        </button>
+      {{/if}}
+    </div>
+
     <div class="site-wrapper">
 
       {{{body}}}
@@ -37,7 +50,10 @@
       </footer>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
     {{ghost_foot}}
 
+    <script src="{{asset "js/index.js"}}"></script>
   </body>
 </html>
