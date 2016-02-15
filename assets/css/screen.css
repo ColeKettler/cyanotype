@@ -25,7 +25,10 @@ h6 {
 }
 
 hr {
-  height: 2px;
+  position: relative;
+  left: -12.5%;
+  height: 1px;
+  width: 125%;
   background-color: #8fbeda;
   border: 0;
 }
