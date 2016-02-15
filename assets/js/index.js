@@ -1,9 +1,9 @@
 'use strict';
 
-(function ($) {
+(function (document, $) {
   $(function () {
     // Fix for IOS :active
-    document.addEventListener("touchstart", function () {});
+    document.addEventListener('touchstart', function () {});
 
     // Nav activation
     $('.nav-button, .nav-cover').on('click', function (ev) {
@@ -11,4 +11,4 @@
       $('body').toggleClass('nav-opened');
     });
   });
-}(jQuery));
+}(document, jQuery));

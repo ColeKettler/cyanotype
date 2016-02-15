@@ -57,6 +57,7 @@
 
   // Environments
   "devel": true,
+  "browser": true,
   "jquery": true,
   "node": true,
 
