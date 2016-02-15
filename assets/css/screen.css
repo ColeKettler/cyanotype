@@ -1,12 +1,5 @@
 /* Base */
-html {
-  height: 100%;
-  max-height: 100%;
-}
-
 body {
-  height: 100%;
-  max-height: 100%;
   background-color: #0f033f;
   color: #8fbeda;
   font-family: Oxygen, sans-serif;
@@ -68,7 +61,6 @@ button:focus {
 }
 
 .site-wrapper {
-  position: relative;
   min-height: 100%;
 }
 
@@ -77,6 +69,40 @@ button:focus {
   z-index: 10;
   padding: 35px 40px;
   margin: 0 0 30px 0;
+}
+
+.site-footer {
+  margin: 1em 0 0 0;
+  padding: 1em;
+  font-size: .75em;
+}
+
+.copyright {
+  display: block;
+  width: 45%;
+  float: left;
+}
+
+.powered-by {
+  display: block;
+  width: 45%;
+  float: right;
+  text-align: right;
+}
+
+/* Clearfix */
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
 }
 
 /* Icons */
