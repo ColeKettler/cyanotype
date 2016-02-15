@@ -18,10 +18,7 @@ h6 {
 }
 
 hr {
-  position: relative;
-  left: -12.5%;
   height: 1px;
-  width: 125%;
   background-color: #8fbeda;
   border: 0;
 }
@@ -271,6 +268,21 @@ body.nav-opened .nav-button .icon-menu:after {
   transform: rotate(-45deg);
   transition: bottom 0.3s 0s,
               transform 0.3s 0.3s;
+}
+
+/* Posts */
+
+.post {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  word-wrap: break-word;
+}
+
+.post hr {
+  position: relative;
+  left: -12.5%;
+  width: 125%;
 }
 
 /* Fonts */
