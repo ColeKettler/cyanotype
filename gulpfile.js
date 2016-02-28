@@ -7,6 +7,7 @@ var del = require('del');
 var gulp = require('gulp');
 var cache = require('gulp-cached');
 var jshint = require('gulp-jshint');
+var livereload = require('gulp-refresh');
 
 // FILES
 var componentFiles = ['assets/components/**/*'];
@@ -57,7 +58,12 @@ gulp.task('lint', function () {
     .pipe(jshint.reporter('jshint-stylish'));
 });
 
+gulp.task('reload', ['copy'], function () {
+  livereload.reload();
+});
+
 gulp.task('watch', function () {
-  gulp.watch(allFiles, ['copy']);
+  livereload.listen();
+  gulp.watch(allFiles, ['reload']);
   gulp.watch(jsFiles, ['lint']);
 });
