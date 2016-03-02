@@ -106,46 +106,35 @@ button:focus {
   clear: both;
 }
 
-/* Icons */
-.icon,
-.icon:before,
-.icon:after {
-  background-color: #8fbeda;
-}
-
-button .icon,
-button .icon:before,
-button .icon:after {
-  transition: background-color 0.3s ease;
-}
-
-button:active .icon,
-button:active .icon:before,
-button:active .icon:after {
-  background-color: #0f033f;
-}
-
 /* Menu icon */
-.icon-menu,
-.icon-menu:before,
-.icon-menu:after {
+.menu-button,
+.menu-button:before,
+.menu-button:after {
   display: block;
   position: relative;
   height: 1px;
   width: 100%;
+  background-color: #8fbeda;
+  transition: background-color 0.3s ease;
 }
 
-.icon-menu:before,
-.icon-menu:after {
+.menu-button:before,
+.menu-button:after {
   content: "";
 }
 
-.icon-menu:before {
+.menu-button:before {
   top: -9px;
 }
 
-.icon-menu:after {
+.menu-button:after {
   bottom: -8px;
+}
+
+button:active .menu-button,
+button:active .menu-button:before,
+button:active .menu-button:after {
+  background-color: #0f033f;
 }
 
 /* Navigation */
@@ -190,6 +179,13 @@ body.nav-opened .nav {
   list-style: none;
 }
 
+.nav a {
+  border: 0;
+  color: #8fbeda;
+  font-family: 'Bebas Neue Regular', sans-serif;
+  font-size: 1.5em;
+}
+
 .nav-title {
   margin-top: 59px;
 }
@@ -200,7 +196,7 @@ body.nav-opened .nav {
   font-size: 2em;
 }
 
-.nav li {
+.nav-site li {
   width: 100%;
   border-bottom: 1px solid #8fbeda;
   text-align: left;
@@ -209,17 +205,27 @@ body.nav-opened .nav {
 .nav h3,
 .nav a {
   display: block;
+}
+
+.nav-site h3,
+.nav-site a {
   padding: 10px 0 10px 20px;
-  color: #8fbeda;
-  font-family: 'Bebas Neue Regular', sans-serif;
 }
 
-.nav a {
+.nav .nav-social {
+  position: absolute;
+  bottom: 0;
+  padding: 20px 0;
+  border-top: 1px solid #8fbeda;
+  text-align: center;
+}
+
+.nav .nav-social li {
+  display: inline-block;
+}
+
+.nav .nav-social li a {
   border: 0;
-}
-
-.nav a span {
-  font-size: 1.5em;
 }
 
 .nav-button {
@@ -233,41 +239,41 @@ body.nav-opened .nav {
 /* Animated nav menu / close icon */
 /* Heavily inspired by Nick Salloum */
 /* (http://callmenick.com/post/animating-css-only-hamburger-menu-icons) */
-.nav-button .icon-menu,
-.nav-button .icon-menu:before,
-.nav-button .icon-menu:after {
+.nav-button .menu-button,
+.nav-button .menu-button:before,
+.nav-button .menu-button:after {
   visibility: visible;
 }
 
-.nav-button .icon-menu {
+.nav-button .menu-button {
   transition: background-color 0.3s ease,
               visibility 0s 0.3s;
 }
 
-.nav-button .icon-menu:before {
+.nav-button .menu-button:before {
   transition: background-color 0.3s ease,
               top 0.3s 0.3s,
               transform 0.3s 0s;
 }
 
-.nav-button .icon-menu:after {
+.nav-button .menu-button:after {
   transition: background-color 0.3s ease,
               bottom 0.3s 0.3s,
               transform 0.3s 0s;
 }
 
-body.nav-opened .nav-button .icon-menu {
+body.nav-opened .nav-button .menu-button {
   visibility: hidden;
 }
 
-body.nav-opened .nav-button .icon-menu:before {
+body.nav-opened .nav-button .menu-button:before {
   top: 0;
   transform: rotate(45deg);
   transition: top 0.3s 0s,
               transform 0.3s 0.3s;
 }
 
-body.nav-opened .nav-button .icon-menu:after {
+body.nav-opened .nav-button .menu-button:after {
   bottom: 1px;
   transform: rotate(-45deg);
   transition: bottom 0.3s 0s,
@@ -316,9 +322,9 @@ body.nav-opened .nav-button .icon-menu:after {
     background-color: #8fbeda;
   }
 
-  button:hover .icon,
-  button:hover .icon:before,
-  button:hover .icon:after {
+  button:hover .menu-button,
+  button:hover .menu-button:before,
+  button:hover .menu-button:after {
     background-color: #0f033f;
   }
 }

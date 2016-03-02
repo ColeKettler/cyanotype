@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="{{asset 'components/normalize-css/normalize.css'}}">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oxygen">
     <link rel="stylesheet" href="{{asset 'css/screen.css'}}">
+    <link rel="stylesheet" href="{{asset 'css/icons.css'}}">
+
+    <script src="{{asset "js/config.js"}}"></script>
 
     {{ghost_head}}
 
@@ -30,7 +33,7 @@
       {{/if}}
       {{#if @blog.navigation}}
         <button class="nav-button">
-          <span class="icon icon-menu"></span>
+          <span class="menu-button"></span>
         </button>
       {{/if}}
     </div>
