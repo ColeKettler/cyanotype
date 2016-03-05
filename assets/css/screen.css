@@ -113,7 +113,7 @@ button:focus {
   display: block;
   position: relative;
   height: 1px;
-  width: 100%;
+  width: 37px;
   background-color: #8fbeda;
   transition: background-color 0.3s ease;
 }
@@ -268,15 +268,17 @@ body.nav-opened .nav-button .menu-button {
 
 body.nav-opened .nav-button .menu-button:before {
   top: 0;
-  transform: rotate(45deg);
+  transform: rotate(45deg) scale(1.4, 1);
   transition: top 0.3s 0s,
+              width 0.3s 0.3s,
               transform 0.3s 0.3s;
 }
 
 body.nav-opened .nav-button .menu-button:after {
   bottom: 1px;
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) scale(1.4, 1);
   transition: bottom 0.3s 0s,
+              width 0.3s 0.3s,
               transform 0.3s 0.3s;
 }
 
