@@ -187,21 +187,17 @@ body.nav-opened .nav {
   list-style: none;
 }
 
+.nav-site .nav-title a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 2em;
+}
+
 .nav a {
   border: 0;
   color: #8fbeda;
   font-family: 'Bebas Neue Regular', sans-serif;
   font-size: 1.5em;
-}
-
-.nav-title {
-  margin-top: 59px;
-}
-
-.nav-title h3 {
-  margin: 0;
-  text-align: left;
-  font-size: 2em;
 }
 
 .nav-site li {
@@ -210,12 +206,10 @@ body.nav-opened .nav {
   text-align: left;
 }
 
-.nav h3,
 .nav a {
   display: block;
 }
 
-.nav-site h3,
 .nav-site a {
   padding: 10px 0 10px 20px;
 }
@@ -351,6 +345,12 @@ body.nav-opened .nav-button .menu-button:after {
   .nav {
     right: -200px;
     width: 200px;
+  }
+
+  .nav-site .nav-title a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1.75em;
   }
 
   .nav-button {
