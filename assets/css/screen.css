@@ -91,6 +91,10 @@ button:focus {
   text-align: right;
 }
 
+.vertical-cell {
+  padding: 20px 0;
+}
+
 /* Clearfix */
 .clearfix {
   zoom: 1;
@@ -291,10 +295,18 @@ body.nav-opened .nav-button .menu-button:after {
   word-wrap: break-word;
 }
 
+.post-title {
+  margin-top: 0;
+}
+
 .post hr {
   position: relative;
   left: -12.5%;
   width: 125%;
+}
+
+.post-meta {
+  font-size: .875em;
 }
 
 /* Fonts */
