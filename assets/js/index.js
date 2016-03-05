@@ -1,6 +1,6 @@
 'use strict';
 
-(function (window, document, $) {
+(function (window, document, $, hljs) {
   $(function () {
     // Fix for IOS :active
     document.addEventListener('touchstart', function () {});
@@ -19,5 +19,8 @@
       var $navItem = $li.append($a);
       $navSocial.append($navItem);
     });
+
+    // Code highlighting
+    hljs.initHighlightingOnLoad();
   });
-}(window, document, window.jQuery));
+}(window, document, window.jQuery, window.hljs));

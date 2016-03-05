@@ -110,6 +110,12 @@ button:focus {
   padding: 20px 0;
 }
 
+/* Code highlighting */
+.hljs {
+  background: #8fbeda;
+  word-wrap: normal;
+}
+
 /* Clearfix */
 .clearfix {
   zoom: 1;
