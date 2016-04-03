@@ -5,6 +5,7 @@ body {
   font-family: Oxygen, sans-serif;
   font-size: .875em;
   line-height: 1.4;
+  text-rendering: optimizeLegibility;
 }
 
 h1 {
@@ -18,6 +19,7 @@ h4,
 h5,
 h6 {
   font-family: 'Bebas Neue Regular', sans-serif;
+  font-weight: normal;
   text-align: center;
   margin-top: 0;
 }
@@ -214,6 +216,7 @@ body.nav-opened .nav {
   border: 0;
   color: #8fbeda;
   font-family: 'Bebas Neue Regular', sans-serif;
+  font-weight: normal;
   font-size: 1.75em;
 }
 
