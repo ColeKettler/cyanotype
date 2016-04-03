@@ -29,4 +29,4 @@ The theme uses a subset of [Font Awesome's brand icons](https://fortawesome.gith
 
 A [Gulpfile](http://gulpjs.com/) is included. I build against Node 4.x (LTS) and modern browsers (IE 10+).
 
-This theme is primarily designed with my needs in mind. However, if you think it's kinda cool, feel free to use it. If you run into any trouble or have a suggestion, I'm always willing to take a look at an issue or a PR.
+This theme is primarily designed with my needs in mind. However, if you think it's kinda cool, feel free to use it. If you run into any trouble or have a suggestion, I'm always willing to take a look at an issue or a PR. :dragon:
