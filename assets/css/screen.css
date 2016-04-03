@@ -319,8 +319,8 @@ body.nav-opened .nav-button .menu-button:after {
 
 .post hr {
   position: relative;
-  left: -12.5%;
-  width: 125%;
+  left: -6.25%;
+  width: 112.5%;
 }
 
 .post-meta {
@@ -390,5 +390,10 @@ body.nav-opened .nav-button .menu-button:after {
 
   .content {
     padding: 0 10%;
+  }
+
+  .post hr {
+    left: -12.5%;
+    width: 125%;
   }
 }
